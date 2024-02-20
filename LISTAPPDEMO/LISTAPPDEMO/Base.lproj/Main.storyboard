@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Listapp-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LISTAPPDEMO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="listapp" customModule="LISTAPPDEMO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grocery List™️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfQ-ph-Rwz">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="118.66666666666667"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -50,6 +50,9 @@
                                                         <color key="strokeColor" systemColor="systemGray5Color"/>
                                                     </backgroundConfiguration>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="addToList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gmY-IR-WpE"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -73,6 +76,9 @@
                                                         <color key="strokeColor" systemColor="systemGray5Color"/>
                                                     </backgroundConfiguration>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="deleteFromList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gM5-jd-lHn"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmv-JP-9YP">
                                                 <rect key="frame" x="278" y="0.0" width="75" height="75.333333333333329"/>
@@ -82,6 +88,9 @@
                                                         <color key="strokeColor" systemColor="systemGray5Color"/>
                                                     </backgroundConfiguration>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mxt-pg-dfa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -115,6 +124,16 @@
                             <constraint firstAttribute="trailing" secondItem="6AH-HM-1Uz" secondAttribute="trailing" constant="20" id="t0U-eH-hVq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addBTN" destination="7UP-Tg-5V9" id="YsU-UU-R9E"/>
+                        <outlet property="clearBTN" destination="Jmv-JP-9YP" id="IVf-0T-0kV"/>
+                        <outlet property="deleteBTN" destination="hOe-CQ-8Gh" id="nqj-2P-xhH"/>
+                        <outlet property="itemNumTF" destination="pN8-Wz-CC8" id="dUn-21-0ms"/>
+                        <outlet property="itemQuantityTF" destination="Pd8-KO-bW3" id="GcG-gJ-GBI"/>
+                        <outlet property="itemTF" destination="o3g-ZC-Wej" id="B4O-pi-Nv8"/>
+                        <outlet property="listTV" destination="vRv-oo-IXT" id="bYp-w5-B3P"/>
+                        <outlet property="listimg" destination="c3t-jc-9NR" id="ZYz-Ic-KhX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
